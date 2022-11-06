@@ -1,0 +1,93 @@
+/* start with universal selector */
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Asap', sans-serif;
+}
+
+body{
+    background-color: #24272e;
+}
+header{
+    background-color: white;
+    padding: 20px;
+}
+
+header > h1{
+    color: #25272e;
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+}
+
+.score-board{
+    margin: 20px auto;  /* works outside the white border, padding works inside the white border*/
+    border: 3px solid white;
+    border-radius: 4px;  /*to give curved edges */
+    text-align: center;
+    width: 200px;
+    color: white;
+    font-size: 46px;
+    padding: 15px 20px;
+    font-family: 'Asap', sans-serif;
+    position: relative;  /* added this after adding absolute postion to id user-label*/
+}
+
+.badge{
+    background-color: #e2584d;
+    color: white;
+    font-size: 14px;
+    padding: 2px 10px;
+    
+}
+
+#user-label{
+    position: absolute;  /* read more on positions*/
+    top: 30px;
+    left: -20px; /* negative pushes it to the right*/
+}
+
+#comp-label{
+    position: absolute;  /* read more on positions*/
+    top: 30px;
+    right: -20px; /* negative pushes it to the right*/
+}
+
+.result{
+    font-size: 40px;
+    color: white;
+    
+}
+
+.result > p{
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.choices{
+    margin: 50px 0px; /* 50 top and bottom, and 0 left and right*/
+    text-align: center;
+}
+
+.choice{
+    border: 4px solid white;
+    border-radius: 50%; /* we dont know the excat width in pixels so we use 50 % to make it round*/
+    margin: 0px 25px;
+    padding: 15px;
+    display: inline-block;
+    transition: all 0.3s ease ;  /* to make a smaooth hover color change*/
+}
+
+.choice:hover{
+    cursor: pointer;
+    background-color: #386b6e;
+}
+
+#action-message{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
