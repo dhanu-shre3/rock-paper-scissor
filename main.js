@@ -15,7 +15,36 @@ const scissor_div = document.getElementById("s");
 //this makes it easier to process instaed of writing the whole getelementbyid thingy
 //thats why he used a const keyword
 
+function getComputerChoice(){
+    const choices = ['r', 'p', 's']
+     // this method returns number btw 0.0 and 0.9, so to get btw 0 and 2 we multiply by 3
+    const randomNumber = Math.floor(Math.random() * 3);
+    return choices[randomNumber]
+}
 
+function game(userChoice){
+    const computerChoice = getComputerChoice();
+    switch (userChoice + computerChoice) {
+        case "rs":
+        case "pr":
+        case "sp":
+            console.log("USER WINS.");
+            break;
+        case "rp":
+        case "ps":
+        case "sr":
+            console.log("USER LOSES.");
+            break;
+        case "rr":
+        case "pp":
+        case "ss":
+            console.log("its a draw.");
+            break;
+                                        
+    }
+}
+
+game("c");
 
 function main(){
     rock_div.addEventListener('click', function(){
